@@ -15,7 +15,7 @@ npm run serve
 
 Browser logs when running on my computer (details of my setup can be found in the [original issue report](https://github.com/firebase/firebase-js-sdk/issues/6087)):
 
-``
+```
 [2022-04-10T19:22:12.934Z]  @firebase/firestore: Firestore (9.6.10): INTERNAL UNHANDLED ERROR:  Error: Failed to execute 'put' on 'IDBObjectStore': #<Object> could not be cloned.
     at Ti.put (webpack-internal:///./node_modules/@firebase/firestore/dist/index.esm2017.js:5850:24)
     at Proxy.addEntry (webpack-internal:///./node_modules/@firebase/firestore/dist/index.esm2017.js:8783:22)
@@ -381,4 +381,4 @@ index.esm2017.js?0829:193 Uncaught Error: FIRESTORE (9.6.10) INTERNAL ASSERTION 
     at Proxy.enqueueAndForget (index.esm2017.js?0829:16284:1)
     at bu.handleDelayElapsed (index.esm2017.js?0829:13281:1)
     at eval (index.esm2017.js?0829:13263:1)
-``
+```
