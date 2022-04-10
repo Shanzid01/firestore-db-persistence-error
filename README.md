@@ -1,4 +1,5 @@
 ### This project aims to demonstrate an issue in firestore persistence when running inside a Vue3+Typescript web app
+### [See live demo](https://firestore-db-persistence-error.pages.dev/)
 
 You'll find **all** the relevant code for this bug inside [`src/App.vue`](https://github.com/Shanzid01/firestore-db-persistence-error/blob/main/src/App.vue) file.
 
