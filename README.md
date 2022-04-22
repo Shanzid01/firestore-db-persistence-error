@@ -1,5 +1,16 @@
 ### This project aims to demonstrate an issue in firestore persistence when running inside a Vue3+Typescript web app
+
 ### [See live demo](https://firestore-db-persistence-error.pages.dev/)
+
+## UPDATE
+
+I was able to create a not-so-elegant patch for this error by modifying a firestore dependency file.
+
+Diagnosis:
+
+- Firestore was trying to insert invalid values into indexedDB. These values include functions (functions cannot be inserted into indexedDB).
+- Stringifying key-value pairs (`JSON.stringify`), and then deserializing them (`JSON.parse`) removed these invalid values.
+- Adding the transformed values into indexedDB no longer throws the errors.
 
 You'll find **all** the relevant code for this bug inside [`src/App.vue`](https://github.com/Shanzid01/firestore-db-persistence-error/blob/main/src/App.vue) file.
 
