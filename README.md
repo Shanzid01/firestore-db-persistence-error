@@ -12,6 +12,10 @@ Diagnosis:
 - Stringifying key-value pairs (`JSON.stringify`), and then deserializing them (`JSON.parse`) removed these invalid values.
 - Adding the transformed values into indexedDB no longer throws the errors.
 
+See `patches/@firebase+firestore+3.4.7.patch` for details on the firestore patch.
+
+### Details
+
 You'll find **all** the relevant code for this bug inside [`src/App.vue`](https://github.com/Shanzid01/firestore-db-persistence-error/blob/main/src/App.vue) file.
 
 **Install** the app and **serve** the code (instructions below), you should see the error come up immediately in the browser logs when you visit the page (usually deployed to http://localhost:8080).
