@@ -1,21 +1,21 @@
 diff --git a/node_modules/@firebase/firestore/dist/index.esm2017.js b/node_modules/@firebase/firestore/dist/index.esm2017.js
-index 11fb0d1..d81934a 100644
+index 11fb0d1..d626fa9 100644
 --- a/node_modules/@firebase/firestore/dist/index.esm2017.js
 +++ b/node_modules/@firebase/firestore/dist/index.esm2017.js
-@@ -5878,6 +5878,16 @@ class Hs {
+@@ -5758,6 +5758,16 @@ class mi {
          this.store = t;
      }
      put(t, e) {
 +        try {
 +            t = t != null? JSON.parse(JSON.stringify(t)): t;
 +        } catch {
-+            console.warn("Could not process value before writing to IndexedDB:", t);
++            console.warn("Could not process value before adding into indexedDB:", t);
 +        }
 +        try {
 +            e = e != null? JSON.parse(JSON.stringify(e)): e;
 +        } catch {
-+            console.warn("Could not process value before writing to IndexedDB:", e);
++            console.warn("Could not process value before adding into indexedDB:", e);
 +        }
          let n;
          return void 0 !== e ? (O("SimpleDb", "PUT", this.store.name, t, e), n = this.store.put(e, t)) : (O("SimpleDb", "PUT", this.store.name, "<auto-key>", t), 
-         n = this.store.put(t)), ei(n);
+         n = this.store.put(t)), Ei(n);
